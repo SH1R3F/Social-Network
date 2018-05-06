@@ -19,6 +19,9 @@ $GLOBALS['config'] = array(
   'sessions' => array(
     'user_login' => 'login_user_id',
     'user_token' => 'forms_token'
+  ),
+  'imgur' => array(
+    'bearer' => 'Your imgur bearer token'
   )
 );
 
