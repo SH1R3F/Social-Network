@@ -1,0 +1,91 @@
+body{
+  background: linear-gradient(
+    rgba(0, 0, 0, .7),
+    rgba(0, 0, 0, .7)
+    ), url('../images/Header.jpg') top center no-repeat;
+  background-size: cover !important;
+  background-attachment: fixed;
+}
+.login-box{
+  background: rgba(255, 255, 255, .5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #777;
+  border-radius: 7px;
+  padding: 10px;
+  width: 550px;
+  max-width: 100%;
+}
+@media only screen and (max-width: 761px){
+  .login-box{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px;
+  }
+}
+.login-box .title img{
+  width: 70px;
+  height: 70px;
+}
+.login-box .title div{
+  margin-left: 10px;
+  margin-right: 20px;
+  width: calc(100% - 100px);
+  border-bottom: 1px solid #BBB;
+  padding-bottom: 5px;
+}
+.login-box .title div h3{
+  margin: 10px 0 0 0;
+  font-weight: bold;
+}
+.login-box .inputs{
+  margin-top: 60px;
+  padding: 20px 20px 50px;
+}
+.login-box .inputs .group-form{
+  margin-bottom: 15px;
+}
+.login-box .inputs input{
+  width: 100%;
+  padding: 7px;
+  background: rgba(255, 255, 255, .5);
+  outline: none;
+  border: 1px solid #AAA;
+  border-radius: 3px;
+}
+.login-box .submit button{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f34848;
+  border: 1px solid #AAA;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  bottom: -30px;
+  outline: none;
+}
+.login-box .submit button i{
+  font-size: 18px;
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-box .options{
+  text-align: center;
+}
+.login-box .options a{
+  color: #555 !important;
+  padding: 0 15px;
+}
+.login-box .options a:first-of-type:not(.log){
+  border-right: 1px solid #555;
+}
+.login-box .options a.log{
+  border-bottom: 1px solid #555;
+}

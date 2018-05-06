@@ -1,0 +1,64 @@
+.settings-container{
+  margin-top: 100px;
+}
+.settings{
+  background: rgba(255, 255, 255, .7);
+  border: 1px solid #CCC;
+  border-radius: 7px;
+  padding: 10px;
+  width: 750px;
+  max-width: 100%;
+  margin: 0 auto 25px;
+}
+.settings .title{
+  border-bottom: 1px solid #CCC;
+}
+
+.settings .inputs{
+  padding: 20px 20px 50px;
+}
+.settings .inputs .group-form{
+  margin-bottom: 15px;
+}
+.settings .inputs input,
+.settings .inputs textarea{
+  width: 100%;
+  padding: 7px;
+  background: rgba(255, 255, 255, .5);
+  outline: none;
+  border: 1px solid #AAA;
+  border-radius: 3px;
+}
+.settings .submit button{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f34848;
+  border: 1px solid #AAA;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  bottom: -30px;
+  outline: none;
+}
+.settings .submit button i{
+  font-size: 18px;
+  color: #FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.settings .options{
+  text-align: center;
+}
+.settings .options a{
+  color: #555 !important;
+  padding: 0 15px;
+}
+.settings .options a:first-of-type:not(.log){
+  border-right: 1px solid #555;
+}
+.settings .options a.log{
+  border-bottom: 1px solid #555;
+}

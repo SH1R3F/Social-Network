@@ -1,0 +1,74 @@
+CREATE TABLE IF NOT EXISTS users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(20) NOT NULL,
+  username VARCHAR(30) NOT NULL UNIQUE,
+  email VARCHAR(30) NOT NULL UNIQUE,
+  password VARCHAR(60) NOT NULL,
+  bio VARCHAR(255),
+  town VARCHAR(30),
+  website VARCHAR(30),
+  joined DATETIME,
+  verified BOOLEAN NOT NULL DEFAULT 0,
+  image_url VARCHAR(80) DEFAULT 'https://i.imgur.com/trYIAdo.gif',
+  active_state BOOLEAN NOT NULL DEFAULT 0
+);
+
+CREATE TABLE login_tokens (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  token VARCHAR(64) NOT NULL UNIQUE,
+  user_id INT NOT NULL
+);
+
+CREATE TABLE passwords_tokens (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  token VARCHAR(64) NOT NULL UNIQUE,
+  user_id INT NOT NULL
+);
+
+CREATE TABLE followers (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  follower_id  INT NOT NULL
+);
+
+CREATE TABLE posts (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  body TEXT NOT NULL,
+  posted_at DATETIME,
+  likes INT NOT NULL DEFAULT 0,
+  comments INT NOT NULL DEFAULT 0
+);
+
+CREATE TABLE likes (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  post_id INT NOT NULL
+);
+
+CREATE TABLE comments (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  post_id INT NOT NULL,
+  posted_at DATETIME,
+  body VARCHAR(700) NOT NULL
+);
+
+CREATE TABLE notifications (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  post_id INT,
+  type INT NOT NULL,
+  body VARCHAR(700) NOT NULL,
+  state TINYINT NOT NULL DEFAULT 0,
+  creation_time DATETIME NOT NULL
+);
+
+CREATE TABLE messages (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  sender_id INT NOT NULL,
+  receiver_id INT NOT NULL,
+  body TEXT NOT NULL,
+  seen INT DEFAULT 0,
+  sending_time DATETIME NOT NULL
+);
