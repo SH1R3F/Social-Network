@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && $_FILES['profilepicture']['tmp_name'
       curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
       curl_setopt($ch,CURLOPT_URL, $url);
       curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Authorization: Bearer e55920571c9c93256610e172fdba4518cea645d3',
+        'Authorization: Bearer ' . Config::get('imgur/bearer'),
         'Content-Type: application/x-www-form-urlencoded'
       ));
       curl_setopt($ch, CURLOPT_POST, 1);
