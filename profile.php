@@ -135,7 +135,7 @@ get_header();?>
   </div>
 </div>
 <script>
-getUserPosts(<?php echo $data->id; ?> 7, 0, 'UPDATE')
+getUserPosts(<?php echo $data->id; ?>, 7, 0, 'UPDATE')
 setInterval(function(){
   getUserPosts(<?php echo $data->id; ?>, 7, 0, 'UPDATE')
 }, 1500)
